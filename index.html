@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ScrewSplat</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://seungyeon-k.github.io">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://dsqnet.github.io">
+            [T-ASE 2022] DSQNet
+          </a>
+          <a class="navbar-item" href="https://sqpdnet.github.io">
+            [CoRL 2022] SQPDNet
+          </a>
+          <a class="navbar-item" href="https://searchforgrasp.github.io">
+            [CoRL 2023] Search-for-Grasp
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <!-- Title. -->
+          <h1 class="title is-2 publication-title">
+            ScrewSplat: <br>
+            <span class="subtitle is-3"> <font color="#363636">An End-to-End Method for Articulated Object Recognition</font></span>
+          </h1>
+          <!-- <h1 class="title is-3 publication-title">An End-to-End Method for Articulated Object Recognition</h1> -->
+          <p class="subtitle">Conference on Robot Learning (CoRL) 2025</p>
+
+          <!-- Authors. -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://seungyeon-k.github.io">Seungyeon Kim</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Junsu Ha<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              Young Hun Kim<sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.gabe-yhlee.com">Yonghyeon Lee</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/robotics.snu.ac.kr/fcp/">Frank C. Park</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Seoul National University,</span>
+            <span class="author-block"><sup>2</sup>Massachusetts Institute of Technology</span>
+          </div>
+
+          <!-- Icons. -->
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming soon)</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (Coming soon)</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming soon)</span>
+                  </a>
+              </span>
+
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="."
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset (Coming soon)</span>
+                  </a>
+              </span>
+
+            </div>
+          </div>
+
+          <!-- Intro Video. -->
+          <video id="sd" autoplay controls muted loop playsinline height="100%">
+            <source src="./assets/videos/intro.mp4"
+                    type="video/mp4">
+          </video>
+
+          <!-- Blank. -->
+          <div class="columns is-centered">
+            <div class="content">
+              <h2 class="title is-3"></h2>
+            </div>            
+          </div>
+
+          <!-- TL;DR. -->
+          <div class="columns is-centered has-text-justified interpolation-panel">
+            <div class="column is-full-width">
+              <h2 class="title is-5">
+                <font color="#808080">
+                  <p></p><p></p><p></p>
+                  ScrewSplat begins by randomly initializing 3D Gaussians and screw axes, which are then 
+                  jointly optimized to recover the object’s part-wise 3D geometry and its underlying kinematic structure.
+                </font>
+              </h2>
+            </div>
+          </div>
+          
+          <!-- Blank. -->
+          <div class="columns is-centered">
+            <div class="content">
+              <h2 class="title is-3"></h2>
+            </div>            
+          </div>
+
+          <!-- Teaser Video. -->
+          <div class="columns is-centered">
+
+            <!-- Recognition. -->
+            <div class="column has-text-left">
+              <div class="content">
+                <h2 class="title is-3">Articulated Object Recognition</h2>
+                <p>
+                  ScrewSplat consistently achieves accurate recovery of 3D geometry, screw axes, and part decompositions 
+                  of articulated objects using only RGB observations.
+                </p>
+                <!-- <video id="sd" autoplay controls muted loop playsinline height="100%"> -->
+                <video id="sd" autoplay controls muted loop playsinline height="100%">
+                  <source src="./assets/videos/recognition_intro.mp4"
+                          type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+            <!-- Manipulation. -->
+            <div class="column has-text-left">
+              <h2 class="title is-3">Text-guided Manipulation</h2>
+              <div class="columns is-centered">
+                <div class="column content">
+                  <p>
+                    We leverage ScrewSplat in conjunction with a large vision–language model to infer 
+                    target configurations, which are subsequently used to control a robotic manipulator.
+                  </p>
+                  <!-- <video id="tr" autoplay controls muted loop playsinline height="100%"> -->
+                  <video id="sd" autoplay controls muted loop playsinline height="100%">
+                    <source src="./assets/videos/manipulation_intro.mp4"
+                            type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Articulated object recognition -- the task of identifying both the geometry and kinematic joints of 
+            objects with movable parts -- is essential for enabling robots to interact with everyday objects such as doors 
+            and laptops. However, existing approaches often rely on strong assumptions, such as a known number of articulated
+            parts; require additional inputs, such as depth images; or involve complex intermediate steps that can introduce
+            potential errors -- limiting their practicality in real-world settings. In this paper, we introduce <i>ScrewSplat</i>, 
+            a simple end-to-end method that operates solely on RGB observations. Our approach begins by randomly initializing 
+            screw axes, which are then iteratively optimized to recover the object’s underlying kinematic structure. By 
+            integrating with Gaussian Splatting, we simultaneously reconstruct the 3D geometry and segment the object into rigid,
+            movable parts. We demonstrate that our method achieves state-of-the-art recognition accuracy across a diverse set 
+            of articulated objects, and further enables zero-shot, text-guided manipulation using the recovered kinematic model.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+        <div class="content has-text-centered">
+          <p>
+            Coming soon
+          </p>
+        </div>        
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Dataset. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">3D Gaussian Splatting and Screw Theory</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            <b>Screw theory</b> provides a natural mathematical formulation for describing screw motion, which involves a 
+            rotation about an axis combined with a translation along that same axis.
+          </p>
+          <p>
+            Recently, <b>3D Gaussian Splatting</b> has been developed for novel-view synthesis from multiple RGB images and can 
+            also be used to obtain a 3D representation of scenes. Its core idea is to initially randomly splat 3D textured Gaussians 
+            and then optimize their poses, sizes, and color textures to represent the scene -- i.e., by minimizing an RGB rendering loss function.
+          </p>
+          <p>
+            The key intuition behind <b>ScrewSplat</b> originated from the question: Could we design an effective method that, similar 
+            to 3D Gaussian Splatting, ``splats''' screws to discover the kinematic structures of articulated objects? Our approach begins 
+            by randomly initializing screw axes alongside 3D Gaussians, which are then jointly optimized to recover the object’s part-aware
+            geometry and kinematic structure in an end-to-end manner.
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <video id="tablewarenet" autoplay controls muted loop playsinline height="100%">
+          <!-- <video id="tablewarenet" controls muted preload playsinline width="75%"> -->
+            <source src="./assets/videos/overview.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!--  -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">ScrewSplat: Integrating Screw Model with 3D Gaussians</h2>
+
+        <!--  -->
+        <h3 class="title is-4">Core Components of ScrewSplat</h3>
+        <div class="content has-text-justified">
+          <p>
+            First, we splat <b>screw primitives</b>, where the \( j \)th screw primitive 
+            \( \mathcal{A}_j \) is parametrized by a tuple \( (\mathcal{S}_j, \gamma_j) \), 
+            with \( \mathcal{S}_j \) representing a screw axis and 
+            \( \gamma_j \in [0, 1] \) denoting the confidence.
+            </p>
+            
+            <p>
+            Next, we splat <b>part-aware Gaussian primitives</b>, 
+            where the \( i \)th primitive \( \mathcal{H}_i \) is parametrized by 
+            an augmented tuple \( (T_i, s_i, \sigma_i, c_i, m_i) \). The paremeters \( (T_i, s_i, \sigma_i, c_i) \)
+            are identical to those of Gaussians in standard Gaussian splatting.
+            Here, \( m_i = (m_{i0}, \cdots, m_{ij}, \cdots) \) represents a probability simplex over 
+            the parts defined by screw primitives. Specifically, \( m_{i0} \) denotes the probability that the Gaussian 
+            belongs to the static base part, while \( m_{ij} \) for \( j \geq 1 \) denotes the probability 
+            that the Gaussian is associated with the part whose motion is governed by the \( j \)th screw 
+            primitive \( \mathcal{A}_j \).
+            </p>
+            
+            <p>
+            Lastly, we assign a <b>joint angle vector</b> 
+            \( \theta_k = (\theta_{k1}, \cdots, \theta_{kj}, \cdots) \) 
+            to the RGB observations corresponding to the \( k \)th configuration of the articulated object. Specifically, \( \theta_{kj} \) 
+            denotes the joint angle associated with the \( j \)th screw primitive \( \mathcal{A}_j \) in the \( k \)th configuration. 
+
+            </p>
+        </div>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <img src="./assets/images/core_components.PNG"
+                 alt="core components"/>
+          </div>
+        </div>
+
+        <!--  -->
+        <h3 class="title is-4">RGB Rendering Procedure with ScrewSplat</h3>
+        <div class="content has-text-justified">
+          <p>
+            The key idea behind the RGB rendering procedure is to <b>replicate Gaussians</b> from each part-aware Gaussian primitive 
+            and assign each replica to either the static base or one of the movable parts. Specifically, we construct 
+            Gaussians \( \mathcal{G}_{ij} \) from the \( i \) th part-aware Gaussian primitive \( \mathcal{H}_i \).  
+            Each Gaussian \(\mathcal{G}_{ij}\) is assigned to the base part if \( j = 0 \), and to the movable part associated with the screw primitive 
+            \( \mathcal{A}_j \) if \(j \geq 1\). 
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="tablewarenet" autoplay controls muted loop playsinline height="100%">
+          <!-- <video id="tablewarenet" controls muted preload playsinline width="75%"> -->
+            <source src="./assets/videos/rendering.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <h3 class="title is-4">Loss Function for Optimizing ScrewSplat</h3>
+        <div class="content has-text-justified">
+          <p>
+            The part-aware Gaussian primitives, screw primitives, and joint angles are jointly optimized to minimize the following loss function:
+            $$
+            \begin{equation*}
+            \mathcal{L} = \mathcal{L}_{\text{render}} + \beta \sum_{j} \sqrt{\gamma_j},
+            \end{equation*}
+            $$
+            where \( \mathcal{L}_{\text{render}} \) is the RGB rendering loss. The second term serves as a regularization term -- referred to as 
+            the <b>parsimony loss</b> -- which encourages ScrewSplat to represent articulated objects using the smallest possible number of screw primitives.
+            This term not only pushes the model to select a minimal set of screws, but also promotes the identification of the most reliable ones.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Text-guided Articulated Object Manipulation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Text-guided Articulated Object Manipulation</h2>
+
+        <!-- Controlling Joint Angles. -->
+        <h3 class="title is-4">Controlling Joint Angles Using ScrewSplat as a Renderer</h3>
+        <div class="content has-text-justified">
+          <p>
+            The optimized ScrewSplat serves as an RGB image renderer conditioned on the joint angle vector \( \theta \); that is, 
+            the visual appearance (i.e., RGB image) of the articulated object \( I \) from an arbitrary camera pose can be 
+            obtained through a continuous -- and even differentiable -- function \( \pi \), such that \( I = \pi(\theta) \).
+            Using this, we focus on controlling the joint angles of an articulated object to match a given text prompt 
+            using visual foundation models. Specifically, given the current visual appearance of the object and a text description 
+            of its current state, along with a target text prompt, our goal is to find a joint angle vector \( \theta \) 
+            such that the rendered appearance \( I = \pi(\theta) \) aligns with the target prompt.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="tablewarenet" autoplay controls muted loop playsinline height="100%">
+          <!-- <video id="tablewarenet" controls muted preload playsinline width="75%"> -->
+            <source src="./assets/videos/text_guidance.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <!-- Object Manipulation Results. -->
+        <h3 class="title is-4">Articulated Object Manipulation Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            We demonstrate the effectiveness of ScrewSplat in zero-shot, text-guided manipulation tasks, highlighting its 
+            practical utility in real-world robotic scenarios. Specifically, ScrewSplat accurately recognizes both the 3D geometry 
+            and kinematic structure of real-world objects — even in challenging cases such as a translucent drawer. A well-trained 
+            ScrewSplat further enables precise estimation of current joint angles and facilitates successful text-guided object manipulation.
+          </p>
+        </div>
+
+        <!-- <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/6m5ZOrbSxxI?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
+        <div class="content has-text-centered">
+          <p>
+            Coming soon
+          </p>
+        </div> 
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Citation. -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Citation</h2>
+    <pre><code>
+      TBD
+<!-- @inproceedings{kim2024t2sqnet,
+  title={T$^2$SQNet: A Recognition Model for Manipulating Partially Observed Transparent Tableware Objects},
+  author={Kim, Young Hun and Kim, Seungyeon and Lee, Yonghyeon and Park, Frank C},
+  booktitle={8th Annual Conference on Robot Learning}
+} -->
+    </code></pre>
+  </div>
+</section>
+
+<!-- Footer. -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        Website template modified from <a href="https://nerfies.github.io/">NeRFies</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
